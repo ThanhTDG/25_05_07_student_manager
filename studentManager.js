@@ -4,16 +4,17 @@ const { getLine, rl } = require('./utils')
 
 
 const defaultPath = './students.json'
-const EX2_DISPLAY_LIST = "2.Display The List Of Students"
-const EX3_ADD_STUDENT = "3.Add New Students To The List"
-const EX4_SEARCH_STUDENT = "4.Search For Students By Name"
-const EX5_DISPLAY_STATISTICS = "5.Display Statistics:"
-const EX6_SAVE_TO_FILE = "6.Save The Student List To A File (JSON)"
-const EX7_LOAD_FROM_FILE = "7.Load Student List From File"
+const EX2_DISPLAY_LIST = "1.Display The List Of Students"
+const EX3_ADD_STUDENT = "2.Add New Students To The List"
+const EX4_SEARCH_STUDENT = "3.Search For Students By Name"
+const EX5_DISPLAY_STATISTICS = "4.Display Statistics:"
+const EX6_SAVE_TO_FILE = "5.Save The Student List To A File (JSON)"
+const EX7_LOAD_FROM_FILE = "Load Student List From File"
+
 const BREAK_LINE = "========================================"
 const GOODBYE = "Goodbye!"
-const EXIT = "1 .Exit"
-
+const EXIT = "6. Exit"
+const EXIT_INPUT = 6;
 const displayTitle = () => {
     console.log(BREAK_LINE)
     console.log(EXIT)
@@ -62,11 +63,11 @@ const start = async () => {
                 console.log("Please select a valid option.");
                 break;
         }
-        if (selectInput != 1) {
+        if (selectInput != EXIT_INPUT) {
             await getLine("enter continue to continue...")
         }
     }
-    while (selectInput != 1)
+    while (selectInput != EXIT_INPUT)
     rl.close()
 }
 

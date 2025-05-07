@@ -60,9 +60,9 @@ async function saveListStudentToFile(path, list) {
     }
     try {
         await saveFile(path, list);
-        console.log("Student list saved successfully.");
+        console.log(`Student list saved successfully ${path}`);
     } catch (error) {
-        console.error("Error saving student list:", error);
+        console.error("Error saving student list to file:", path);
     }
 }
 
@@ -100,7 +100,7 @@ function displayStatistics(list) {
         let average = getAverageGrade(list);
         console.log(`Total students: ${total}`);
         console.log(`Average grade: ${average}`);
-        console.log(`Classification:`);
+        console.log(`Classification: `);
         console.log(`\tExcellent: ${statistics.excellent}`);
         console.log(`\tGood: ${statistics.good}`);
         console.log(`\tAverage: ${statistics.average}`);
@@ -123,7 +123,7 @@ async function findStudentsFromInput(list) {
     if (results.length > 0) {
         displayListStudent(results)
     } else {
-        console.log(`No students found with name: ${searchName}`);
+        console.log(`No students found with name: ${searchName} `);
     }
 }
 
