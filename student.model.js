@@ -22,20 +22,20 @@ class Student {
             grade: this.grade
         }
     }
-    static isValidId(id) {
+    static validateId(id) {
         return Number.isInteger(id) && id > 0;
     }
-    static isValidName(name) {
+    static validateName(name) {
         return typeof name === 'string' && name.trim() !== '';
     }
-    static isValidAge(age) {
+    static validateAge(age) {
         return Number.isInteger(age) && age > 0;
     }
-    static isValidGrade(grade) {
+    static validateGrade(grade) {
         return typeof grade === 'number' && grade >= 0 && grade <= 10;
     }
-    static isValidStudent(id, name, age, grade) {
-        return this.isValidId(id) && this.isValidName(name) && this.isValidAge(age) && this.isValidGrade(grade);
+    static validateStudent(id, name, age, grade) {
+        return this.validateId(id) && this.validateName(name) && this.validateAge(age) && this.validateGrade(grade);
     }
 
     static fromJSON(json) {

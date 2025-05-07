@@ -43,7 +43,7 @@ function getStudentsFromJson(json) {
     let students = []
     for (let i = 0; i < json.length; i++) {
         let data = json[i];
-        if (!Student.isValidStudent(data.id, data.name, data.age, data.grade)) {
+        if (!Student.validateStudent(data.id, data.name, data.age, data.grade)) {
             console.log(`Invalid student data at index ${i}: ${JSON.stringify(data)}`);
             continue;
         }
@@ -110,15 +110,15 @@ function displayStatistics(list) {
 }
 
 async function getStudentFromInput() {
-    let id = await getKeyboardInputValid(Student.isValidId, "id: ", "Invalid ID. Please enter a positive integer.", true)
-    let name = await getKeyboardInputValid(Student.isValidName, "name: ", "Invalid name. Please enter a non-empty string.")
-    let age = await getKeyboardInputValid(Student.isValidAge, "age: ", "Invalid age. Please enter a positive integer.", true)
-    let grade = await getKeyboardInputValid(Student.isValidGrade, "grade: ", "Invalid grade. Please enter a number between 0 and 10.", true)
+    let id = await getKeyboardInputValid(Student.validateId, "id: ", "Invalid ID. Please enter a positive integer.", true)
+    let name = await getKeyboardInputValid(Student.validateName, "name: ", "Invalid name. Please enter a non-empty string.")
+    let age = await getKeyboardInputValid(Student.validateAge, "age: ", "Invalid age. Please enter a positive integer.", true)
+    let grade = await getKeyboardInputValid(Student.validateGrade, "grade: ", "Invalid grade. Please enter a number between 0 and 10.", true)
     return new Student(id, name, age, grade)
 }
 
 async function findStudentsFromInput(list) {
-    let searchName = await getKeyboardInputValid(Student.isValidName, "Enter search name:", "Invalid name. Please enter a non-empty string.")
+    let searchName = await getKeyboardInputValid(Student.validateName, "Enter search name:", "Invalid name. Please enter a non-empty string.")
     let results = findStudentsFromName(list, searchName)
     if (results.length > 0) {
         displayListStudent(results)

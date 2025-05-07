@@ -17,12 +17,13 @@ const EXIT = "6. Exit"
 const EXIT_INPUT = 6;
 const displayTitle = () => {
     console.log(BREAK_LINE)
-    console.log(EXIT)
     console.log(EX2_DISPLAY_LIST)
     console.log(EX3_ADD_STUDENT)
     console.log(EX4_SEARCH_STUDENT)
     console.log(EX5_DISPLAY_STATISTICS)
     console.log(EX6_SAVE_TO_FILE)
+    console.log(EXIT)
+
 }
 
 
@@ -37,27 +38,27 @@ const start = async () => {
         console.log(BREAK_LINE)
         switch (Number(selectInput)) {
             case 1:
-                console.log(GOODBYE)
-                break;
-            case 2:
                 console.log(EX2_DISPLAY_LIST)
                 displayListStudent(listStudent);
                 break;
-            case 3:
+            case 2:
                 console.log(EX3_ADD_STUDENT)
                 await createStudentFromInput(listStudent);
                 break;
-            case 4:
+            case 3:
                 console.log(EX4_SEARCH_STUDENT)
                 await findStudentsFromInput(listStudent);
                 break;
-            case 5:
+            case 4:
                 console.log(EX5_DISPLAY_STATISTICS)
                 displayStatistics(listStudent)
                 break;
-            case 6:
+            case 5:
                 console.log(EX6_SAVE_TO_FILE)
                 await saveListStudentToFile(defaultPath, listStudent);
+                break;
+            case EXIT_INPUT:
+                console.log(GOODBYE)
                 break;
             default:
                 console.log("Please select a valid option.");
