@@ -8,15 +8,14 @@
 //    - Bắt buộc phải có thành viên chủ lực
 //    - Phải có ít nhất 1 người từ đội nòng cốt
 //    - Người còn lại phải là người từ đội dự bị
-
-
 // Tim tat ca cach chon 
-
 // 2. Các ràng buộc bổ sung:
 //    - Trong đội có những cặp bài trùng HLV muốn những người này phải chơi cùng nhau, 
 // nhưng có những cặp thì không thể chơi cùng nhau nên ko thể ghép vào 1 đội. 
 //    - thêm những ràng buộc này trong quá trình chọn đội. 
 //    - HLV có thể thay đổi những điều kiện này trước khi sắp xếp đội hình
+
+
 const { getLine, rl } = require("./utils")
 const BREAK_LINE = "========================================"
 const GOODBYE = "Goodbye!"
@@ -31,7 +30,6 @@ const MAX_MEMBER = 40;
 
 class Team {
     total;
-
 }
 
 const findHowManyWays1 = (mainMemberMax = MAIN_MEMBER, coreMemberMax = CORE_MEMBER, reserveMemberMax = RESERVE_MEMBER) => {
