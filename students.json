@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Hannah",
+        "age": 22,
+        "grade": 3
+    },
+    {
+        "id": 2,
+        "name": "Ethan",
+        "age": 19,
+        "grade": 0
+    },
+    {
+        "id": 3,
+        "name": "Ethan",
+        "age": 21,
+        "grade": 6
+    },
+    {
+        "id": 4,
+        "name": "Jenny",
+        "age": 19,
+        "grade": 9
+    },
+    {
+        "id": 5,
+        "name": "Daisy",
+        "age": 21,
+        "grade": 4
+    },
+    {
+        "id": 6,
+        "name": "Ethan",
+        "age": 20,
+        "grade": 5
+    },
+    {
+        "id": 7,
+        "name": "Daisy",
+        "age": 18,
+        "grade": 6
+    },
+    {
+        "id": 8,
+        "name": "Bob",
+        "age": 21,
+        "grade": 0
+    },
+    {
+        "id": 9,
+        "name": "Charlie",
+        "age": 22,
+        "grade": 0
+    },
+    {
+        "id": 10,
+        "name": "Bob",
+        "age": 19,
+        "grade": 3
+    },
+    {
+        "id": 11,
+        "name": "123123",
+        "age": 12,
+        "grade": 9.1
+    }
+]
