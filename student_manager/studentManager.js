@@ -1,6 +1,6 @@
 const { displayListStudent, createFakeListStudent, createStudentFromInput, findStudentsFromInput, displayStatistics, saveListStudentToFile, getListStudentFromFile } = require('./handleStudents')
 const Student = require('./student.model')
-const { getLine, rl } = require('./utils')
+const { getLine, rl } = require('../utils')
 
 
 const defaultPath = './students.json'

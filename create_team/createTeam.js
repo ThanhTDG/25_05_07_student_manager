@@ -16,7 +16,7 @@
 //    - HLV có thể thay đổi những điều kiện này trước khi sắp xếp đội hình
 
 
-const { getLine, rl } = require("./utils")
+const { getLine, rl } = require("../utils")
 const BREAK_LINE = "========================================"
 const GOODBYE = "Goodbye!"
 const EXIT_INPUT = 3;

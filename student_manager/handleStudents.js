@@ -1,7 +1,7 @@
 const { lstat } = require('fs');
 
 const Student = require('./student.model')
-const { loadFile, saveFile, getKeyboardInputValid } = require('./utils');
+const { loadFile, saveFile, getKeyboardInputValid } = require('../utils');
 
 
 const STUDENT_LIST_EMPTY = "Student list is empty"
